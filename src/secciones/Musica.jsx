@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import cancion1 from '../music/cafe.mp3';
 import cancion2 from '../music/rockstar.mp3';
 import cancion3 from '../music/madonna.mp3';
+import cancion4 from '../music/presidente.mp3';
 import caratula1 from '../images/cfetac.jpg';
 import caratula2 from '../images/juniorh.jpeg';
 import caratula3 from '../images/madonnac.jfif';
+import caratula4 from '../images/caratula3.jpg';
+
 
 const Musica = () => {
     const [reproduciendo1, setReproduciendo1] = useState(false);
     const [reproduciendo2, setReproduciendo2] = useState(false);
     const [reproduciendo3, setReproduciendo3] = useState(false);
+    const [reproduciendo4, setReproduciendo4] = useState(false);
 
     const toggleReproduccion1 = () => {
         setReproduciendo1(!reproduciendo1);
@@ -22,6 +26,10 @@ const Musica = () => {
     const toggleReproduccion3 = () => {
         setReproduciendo3(!reproduciendo3);
     };
+
+    const toggleReproduccion4 = () => {
+        setReproduciendo4(!reproduciendo4);
+    }
 
     return (
         <>
@@ -70,6 +78,21 @@ const Musica = () => {
                         <div className="control">
                             <audio controls autoPlay={reproduciendo3} className="mx-auto">
                                 <source src={cancion3} type="audio/mpeg" />
+                                Tu navegador no admite la reproducción de audio.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                {/* Componente 4 */}
+                <div className="bg-gray-100 p-4 flex justify-center items-center w-full md:w-1/3">
+                    <div className="bg-white p-8 rounded-lg shadow-md w-80 flex flex-col justify-center items-center">
+                        <img src={caratula4} alt="idk - Highvyn, Taylor Shin" className="w-64 h-64 rounded-lg mb-4 shadow-lg shadow-teal-50" />
+                        <h2 className="text-xl font-semibold text-center">Presidente</h2>
+                        <p className="text-gray-600 text-sm text-center">Gabito</p>
+                        <br />
+                        <div className="control">
+                            <audio controls autoPlay={reproduciendo3} className="mx-auto">
+                                <source src={cancion4} type="audio/mpeg" />
                                 Tu navegador no admite la reproducción de audio.
                             </audio>
                         </div>
