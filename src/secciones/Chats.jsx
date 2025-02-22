@@ -11,7 +11,7 @@ const Chats = () => {
             left: 'center',
             textStyle: {
                 color: '#fff',
-                fontWeight: 'bold'
+                fontWeight: 'Playwrite IT Moderna'
             }
         },
         tooltip: {
@@ -51,7 +51,7 @@ const Chats = () => {
             left: 'center',
             textStyle: {
                 color: '#fff',
-                fontWeight: 'bold'
+                fontWeight: 'Playwrite IT Moderna'
             }
         },
         tooltip: {
